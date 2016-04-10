@@ -25,10 +25,12 @@ body{
   background-color: black;
   text-align: center;
   color: white;
-  position: relative;
+  position: fixed;
   padding-top: .4rem;
   transform: scale(1);
   -webkit-transform: scale(1);
+  width: 100%;
+  z-index: 1000;
 }
 
 span a {
@@ -61,12 +63,17 @@ span a {
 .header-container {
   background-image: url("../assets/images/frybabies.png");
   height: 250px;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   -webkit-justify-content: center;
   align-content: center;
@@ -90,16 +97,23 @@ span a {
   -webkit-flex-wrap: wrap;
   -webkit-flex-basis: 400px;
   padding: 0;
+  margin: auto;
   
 }
 .roll {
   font-family: 'Slackey', cursive;
   font-size: 1rem;
   color: white;
+  display: inline-block;
   align-self: center;
   -webkit-align-self: center;
   margin-top: -.7em;
   text-shadow: 3px 3px black;
+  -webkit-box-ordinal-group: 4;
+  -moz-box-ordinal-group: 4;
+  -ms-flex: 4;
+  -webkit-order: 4;
+  order: 4;
 }
 
 /****** Info  ******/
@@ -124,6 +138,9 @@ span a {
   
 }
 .images{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -132,6 +149,7 @@ span a {
   -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
   -webkit-justify-content: center;
+  flex-wrap: wrap;
 }
 .upcoming {
   color: white;
@@ -170,13 +188,18 @@ span a {
   display: flex;
   align-content: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
+  -moz-align-content: center;
   -webkit-align-content: center;
   -webkit-justify-content: center;
 }
 .image-overlay h5{
   font-size: 1.1rem;
   align-self: center;
+  -moz-align-self: center;
   -webkit-align-self: center;
 }
 .third-row-previous-events{
@@ -209,6 +232,9 @@ span a {
   text-shadow: 1px 1px rgba(0,0,0,.5);
 }
 .twitter-div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -263,11 +289,17 @@ span a {
     width: 200px;
     height: 200px;
   }
+  .full-h1 {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+  }
   .frybabies-h1 {
     font-family: 'Slackey', cursive;
     font-size: 4rem;
-    
     margin-bottom: 0;
+    position: relative;
   }
   .second-row-info {
     padding-left: 3rem;
@@ -284,7 +316,7 @@ span a {
     font-size: 5.8rem;
   }
   .header-container {
-    height: 500px;
+    height: 400px;
   }
   .second-row-info p {
     font-size: 1.5rem;
@@ -320,7 +352,6 @@ span a {
   }
   .image-container {
     border: 10px solid gray;
-    border-radius:;
     overflow: hidden;
   }
   
@@ -359,7 +390,9 @@ span a {
   }
 }
 @media(min-width: 845px) {
-  
+  .header-container {
+    height: 600px;
+  }
   .frybabies-h1 {
     font-size: 8rem;
   }
