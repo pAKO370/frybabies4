@@ -4,7 +4,7 @@ html {
 }
 body{
   margin: 0 0 50px;
-  padding: 0; 
+  padding-top: 30px; 
   font-family: 'Montserrat', sans-serif;
   background: white;
 }
@@ -26,6 +26,7 @@ body{
   text-align: center;
   color: white;
   position: fixed;
+	top: 0;
   padding-top: .4rem;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -62,18 +63,20 @@ span a {
 
 .header-container {
   background-image: url("../assets/images/frybabies.png");
-  height: 250px;
+  height: 400px;
   position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover;
+  background-position: center;
   text-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   -webkit-justify-content: center;
   align-content: center;
@@ -90,13 +93,13 @@ span a {
   
 }
 .full-h1 {
-  align-self: center;
+  /* align-self: center;
   flex-wrap: wrap;
   flex-basis: 400px;
   -webkit-align-self: center;
   -webkit-flex-wrap: wrap;
   -webkit-flex-basis: 400px;
-  padding: 0;
+  padding: 0; */
   margin: auto;
   
 }
@@ -125,11 +128,16 @@ span a {
 }
 
 /***** Events *****/
+.test {
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)), url("../assets/images/IMG_0542.jpg");
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
 .third-row-previous-events {
-  background-color: black;
   text-align: center;
-  padding-top: .2rem;
-  
+  padding-top: .2rem; 
 }
 .third-row-previous-events h1,
 .third-row-previous-events h4{
@@ -182,7 +190,6 @@ span a {
   width: 100%;
   height: 100%;
   color: white;
-  
   background-color: rgba(0,0,0,.5);
   border-radius: 50% 50%;
   display: flex;
@@ -256,7 +263,7 @@ span a {
   background-color: black;
   color: white;
   height: 50px;
-  bottom: -10px;
+  bottom: -15;
   width: 100%;
   text-align: center;
   }
@@ -289,12 +296,12 @@ span a {
     width: 200px;
     height: 200px;
   }
-  .full-h1 {
+  /* .full-h1 {
     position: absolute;
     top: 10%;
     left: 0;
     width: 100%;
-  }
+  } */
   .frybabies-h1 {
     font-family: 'Slackey', cursive;
     font-size: 4rem;
@@ -317,7 +324,7 @@ span a {
   }
   .header-container {
     height: 400px;
-  }
+  } 
   .second-row-info p {
     font-size: 1.5rem;
   }
@@ -386,13 +393,22 @@ span a {
   margin: auto;
 }
 .image-container {
+		
     margin: 10px;
   }
 }
-@media(min-width: 845px) {
+@media(min-width: 845px){
   .header-container {
-    height: 600px;
+    min-height: 600px;
+		-webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover;
+  background-attachment: fixed;
   }
+	.test {
+	background-attachment: fixed;
+}
   .frybabies-h1 {
     font-size: 8rem;
   }
@@ -408,7 +424,7 @@ span a {
 
   
   .frybabies-h1 {
-    font-size: 10rem;
+    font-size: 9rem;
   }
   .roll {
     font-size: 2rem;
