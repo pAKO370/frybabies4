@@ -7,10 +7,44 @@ html {
 	min-height: 100%;
 }
 body{
-	margin: 0 0 50px;
-	padding-top: 30px; 
+	
+	margin: 0 0 50px; 
 	font-family: 'Montserrat', sans-serif;
 	background: white;
+}
+.side{
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	left: -50%;
+	transition-property: left;
+	transition-duration: .4s;
+	
+	transition-timing-function: ease-in-out;
+}
+.container-div {
+	position: absolute;
+	left: 0;
+	float: left;
+	padding-top: 30px;
+	transition-property: left;
+	transition-duration: .4s;
+	
+	transition-timing-function: ease-in-out;
+}
+.side-open{
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	left: 0;
+}
+.container-open {
+	position: absolute;
+	left: 50%;
+	float: left;
+	padding-top: 30px;
 }
 .links {
 	display: inline-block;
@@ -52,6 +86,9 @@ span a {
 .black-top a:hover {
 	transform: scale(1.1);
 	-webkit-transform: scale(1.1);
+	color: aqua;
+}
+.selected {
 	color: aqua;
 }
 .icon {
