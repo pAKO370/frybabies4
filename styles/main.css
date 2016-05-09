@@ -12,17 +12,7 @@ body{
 	font-family: 'Montserrat', sans-serif;
 	background: white;
 }
-.side{
-	width: 50%;
-	height: 100%;
-	background-color: black;
-	position: fixed;
-	left: -50%;
-	transition-property: left;
-	transition-duration: .4s;
-	
-	transition-timing-function: ease-in-out;
-}
+
 .container-div {
 	position: absolute;
 	left: 0;
@@ -209,7 +199,7 @@ span a {
 	flex-grow: 1;
 	-webkit-flex-grow: 1;
 	margin: 5px;
-	transform: scale(1.4);
+	transform: scale(1.2);
 }
 .image-container {
 	position: relative;
@@ -311,6 +301,7 @@ iframe {
 	width: 90%;
 	flex-basis: 300px;
 	-webkit-flex-basis: 300px;
+	box-shadow: -4px 4px 35px black;
 }
 .center-forth {
 	text-align: center;
