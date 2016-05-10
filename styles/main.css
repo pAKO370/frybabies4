@@ -11,14 +11,7 @@ body{
 	background: white;
 }
 
-.container-div {
-	position: absolute;
-	left: 0;
-	float: left;
-	transition-property: left;
-	transition-duration: .4s;
-	transition-timing-function: ease-in-out;
-}
+
 
 /********
 *****
@@ -86,10 +79,8 @@ iframe {
 	margin-left: 5%;
 	margin-top: 15%;
 	min-height: 400px;
+	max-height: 450px;
 	width: 90%;
-	-ms-flex-preferred-size: 300px;
-	flex-basis: 300px;
-	-webkit-flex-basis: 300px;
 	box-shadow: -4px 4px 35px black;
 }
 
@@ -242,14 +233,6 @@ iframe {
 	cursor:pointer;
 }
 
-
-
-
-/********/
-
-
-/**** contact  ****/
-
 .forth-row-contact{
 	padding-right: .5rem;
 	padding-left: .5rem;
@@ -369,9 +352,7 @@ iframe {
 		margin-top: 5%;
 		min-height: 600px;
 		width: 90%;
-		-ms-flex-preferred-size: 300px;
-		flex-basis: 300px;
-		-webkit-flex-basis: 300px;
+		max-height: 650px;
 		box-shadow: -4px 4px 35px black;
 	}
 }
