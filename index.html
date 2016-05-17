@@ -99,8 +99,26 @@
     <div class="forth-row-contact" id="contacts">
       <div class="center-forth">
         <h2>For more information, please feel free to contact us.</h2>
-        <h4>Email: </h4><a  class="email" href="mailto:frybabiescontacts@gmail.com">frybabies@frybabies.org</a>
-        <br>
+        <div id="thank-you"></div>
+        <form action="contact.php" method="post">
+        	<ul>
+        		<li>
+        			<label for="name">Name: </label>
+        			<input type="text" id="name" name="name">
+        		</li>
+        		<li>
+        			<label for="email">Email: </label>
+        			<input type="text" id="email" name="email">
+        		</li>
+        		<li>
+        			<label for="comment">Message: </label>
+							<textarea type="text" id="comment" name="comment"></textarea>
+        		</li>
+        		<li>
+        			<input type="submit" id="submit" name="submit" value="Submit">
+        		</li>
+        	</ul>
+        </form>
       </div>
     </div>
     <div class="footer">
@@ -108,12 +126,38 @@
       <p>136 West River St, Rockton IL</p>
     </div>
    </div>
-   
+   <script>
+		var thankYou = document.getElementById('thank-you');
+		var h = document.createElement('h1');
+		var t = document.createTextNode('Your message has been sent!');
+		
+		var email = document.getElementById('name').value;
+		h.appendChild(t);
+		function thanks(){
+			thankYou.appendChild(h);
+		}
+		</script>
+		
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="js/vendor/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
    <script src="js/app.js"></script>
+   
+   <?php
+	if(isset($_POST['submit'])) {
+		$msg = 'Name:  ' . $_POST['name'] . "\n"
+				.'Email:   ' .$_POST['email'] . "\n"
+				.'Message:   '.$_POST['comment'];
+		mail('pfluegelcx@gmail.com', 'Contact from FRYbabies.com',$msg);
+		//header('location: index.html');
+		echo "<script>thanks()</script>;
+	}else {
+		header('location: index.php');
+		exit(0);
+	}
+	
+?>
    
   </body>
 </html>

@@ -253,10 +253,12 @@ iframe {
 	position: relative;
 	width: 85%;
 	margin: auto;
-	max-height: 300px;
+	min-height: 350px;
+	height: auto;
 }
 .center-forth h2 {
 	font-size: 1rem;
+	margin-bottom: 16px;
 }
 .email {
 	font-family: 'Slackey', cursive;
@@ -264,6 +266,53 @@ iframe {
 	font-size: 1.1rem;
 	text-decoration: none;
 	text-shadow: 1px 1px rgba(0,0,0,.5);
+}
+.center-forth form {
+	width: 500px;
+	margin: 0 auto;
+}
+.center-forth form label {
+	text-align: left;
+	margin: 14px 10px;
+	font-size: 2rem;
+}
+form input,
+form textarea{
+	float: right;
+	clear: both;
+	margin: 10px 0px;
+	height: 30px;
+	width: 200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px 0px gray;
+}
+form textarea{
+	height: 150px;
+}
+form input:focus,
+form textarea:focus{
+	border: 1px solid black;
+	box-shadow: 1px 1px 15px 0px gray;
+}
+#submit {
+	width: 150px;
+	margin-right: 25px;
+	transition: .1s ease-in;
+	outline: none;
+}
+#submit:hover{
+	transform: translate(0px,-2px);
+	box-shadow: 0px 2px 15px 2px gray;
+}
+#submit:active{
+	transform: translate(0px,-2px);
+	box-shadow: 0px 0px 15px 0px gray;
+	outline: none;
+}
+.center-forth ul  {
+	list-style: none;
+	text-align: left;
 }
 
 
