@@ -1,4 +1,9 @@
 
+.main-contain{
+	max-width: 1300px;
+	margin: 0 auto;
+	position: relative;
+}
 .menu-items {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -16,7 +21,10 @@
 }
 	.gallery{
 		width: 100%;
+		max-width: 1200px;
 		height: auto;
+		
+		margin: 0 auto;
 		margin-bottom: 50px;
 		display: -webkit-box;
 		display: -webkit-flex;

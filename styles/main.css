@@ -8,9 +8,8 @@ html {
 }
 body{
 	font-family: 'Montserrat', sans-serif;
-	background: white;
+	background-color: lightgray;
 }
-
 
 
 /********
@@ -18,7 +17,12 @@ body{
 ****/
 .navbar-inverse{
 	border-radius: 0px;
+	width: 100%;
 	margin: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
 }
 
 .navbar-inverse .navbar-nav>li>a{
@@ -75,6 +79,7 @@ body{
 	display: none;
 	cursor:pointer;
 }
+
 iframe {
 	margin-left: 5%;
 	margin-top: 15%;
@@ -286,7 +291,12 @@ iframe {
 .center-forth {
 	text-align: center;
 }
-
+	.container-div {
+		max-width: 1300px;
+		margin: 0 auto;
+		background: white;
+		position: relative;
+	}
 @media(min-width: 450px) {
 	
 	.frybabies-h1 {
@@ -455,10 +465,15 @@ iframe {
 	}
 }
 @media(min-width: 1200px) {
-
+	
+	
 	}
+	/*
 @media(min-width: 1400px) {
-
+	.container-div {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
 	.frybabies-h1 {
 		font-size: 13.5rem;
 	}
